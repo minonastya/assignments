@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="homework.HW01" tests="10" skipped="0" failures="0" errors="0" timestamp="2015-09-19T23:34:12" hostname="irlydontknow" time="0.032">
+  <properties/>
+  <testcase name="testFold" classname="homework.HW01" time="0.023"/>
+  <testcase name="testMaxWay1" classname="homework.HW01" time="0.0"/>
+  <testcase name="testMaxWay2" classname="homework.HW01" time="0.0"/>
+  <testcase name="testMaxWay3" classname="homework.HW01" time="0.0"/>
+  <testcase name="testHeapsort1" classname="homework.HW01" time="0.003"/>
+  <testcase name="testHeapsort2" classname="homework.HW01" time="0.0"/>
+  <testcase name="testHeapsort3" classname="homework.HW01" time="0.0"/>
+  <testcase name="testPeano1" classname="homework.HW01" time="0.001"/>
+  <testcase name="testPeano2" classname="homework.HW01" time="0.0"/>
+  <testcase name="testPeano3" classname="homework.HW01" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
