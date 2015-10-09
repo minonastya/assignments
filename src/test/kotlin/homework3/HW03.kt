@@ -4,7 +4,7 @@ import org.junit.Test
 import kotlin.test.assertEquals
 
 public class HW03 {
-    var tree = avlTree(avlTree(avlTree(null, 3, null ), 4, avlTree(null, 5, null)), 6, avlTree(null, 7, null))
+    var tree = AvlTree(AvlTree(AvlTree(null, 3, null ), 4, AvlTree(null, 5, null)), 6, AvlTree(null, 7, null))
 /*
 | | _
 | 7
@@ -20,11 +20,11 @@ public class HW03 {
 */
 
     @Test
-    fun testSearch1(){assertEquals(search(3, tree), true)}
+    fun testSearch1(){assertEquals(tree.search(3), true)}
     @Test
-    fun testSearch2(){assertEquals(search(8, tree), false)}
+    fun testSearch2(){assertEquals(tree.search(8), false)}
 
-    var treeAfterInsert2 = avlTree(avlTree(avlTree(null, 2, null), 3, null), 4, avlTree(avlTree(null, 5, null), 6, avlTree(null, 7, null)))
+    var treeAfterInsert2 = AvlTree(AvlTree(AvlTree(null, 2, null), 3, null), 4, AvlTree(AvlTree(null, 5, null), 6, AvlTree(null, 7, null)))
 /*
 | | | _
 | | 7
@@ -41,9 +41,9 @@ public class HW03 {
 | | | _
  */
     @Test
-    fun testInserted1(){assertEquals(insert(tree, 2).toText(), treeAfterInsert2.toText())}
+    fun testInserted1(){assertEquals(tree.insert(2).toText(), treeAfterInsert2.toText())}
 
-    var treeAfterDelete3 = avlTree(avlTree(null, 2, null), 4, avlTree(avlTree(null, 5, null), 6, avlTree(null, 7, null)))
+    var treeAfterDelete3 = AvlTree(AvlTree(null, 2, null), 4, AvlTree(AvlTree(null, 5, null), 6, AvlTree(null, 7, null)))
     /*
 | | | _
 | | 7
@@ -59,9 +59,9 @@ public class HW03 {
      */
 
     @Test
-    fun testDeleted1(){assertEquals(delete(treeAfterInsert2, 3).toText(), treeAfterDelete3.toText())}
+    fun testDeleted1(){assertEquals(treeAfterInsert2.delete(3).toText(), treeAfterDelete3.toText())}
 
-    var treeAfterInsert10 = avlTree(avlTree(avlTree(null, 2, null), 4, avlTree(null, 5, null)), 6, avlTree(null ,7, avlTree(null, 10, null)))
+    var treeAfterInsert10 = AvlTree(AvlTree(AvlTree(null, 2, null), 4, AvlTree(null, 5, null)), 6, AvlTree(null ,7, AvlTree(null, 10, null)))
 
     /*
 | | | _
@@ -80,9 +80,9 @@ public class HW03 {
      */
 
     @Test
-    fun testInsert2(){assertEquals(insert(treeAfterDelete3, 10).toText(), treeAfterInsert10.toText())}
+    fun testInsert2(){assertEquals(treeAfterDelete3.insert(10).toText(), treeAfterInsert10.toText())}
 
-    var treeAfterDelete6 = avlTree(avlTree(avlTree(null, 2, null), 4, avlTree(null, 5, null)), 7, avlTree(null, 10, null))
+    var treeAfterDelete6 = AvlTree(AvlTree(AvlTree(null, 2, null), 4, AvlTree(null, 5, null)), 7, AvlTree(null, 10, null))
 
     /*
 | | _
@@ -99,5 +99,5 @@ public class HW03 {
      */
 
     @Test
-    fun testDelete2(){assertEquals(delete(treeAfterInsert10, 6).toText(), treeAfterDelete6.toText())}
+    fun testDelete2(){assertEquals(treeAfterInsert10.delete(6).toText(), treeAfterDelete6.toText())}
 }
